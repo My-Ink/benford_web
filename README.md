@@ -1,2 +1,3 @@
-# benford_web
-Check your file for Benford's Law.
+# Benford's Law Checker
+
+Using: `docker-compose up`
