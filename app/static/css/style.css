@@ -1,0 +1,35 @@
+h1 {
+    border: 2px #eee solid;
+    color: #fed;
+    text-align: center;
+    padding: 10px;
+}
+
+html {
+	background: #224;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+input[type="submit"] {
+	display: none;
+}
+
+.file {
+	border: 2px #eee solid;
+	color: #fed;
+	text-align: center;
+	padding: 10px;
+	background: #060;
+}
+
+.submit {
+	border: 2px #eee solid;
+	color: #fed;
+	text-align: center;
+	padding: 10px;
+	background: #060;
+}
+

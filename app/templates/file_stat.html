@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Info Page</title>
+</head>
+<body>
+	<div id='chart' class='chart'></div>
+	<a href="{{ url_for('index') }}">
+		<strong class="go_back_ref">Try other file</strong>
+	</a>
+</body>
+<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+<script type='text/javascript'>
+  var graphs = {{ graphJSON | safe }};
+  Plotly.plot('chart',graphs,{});
+</script>
+<style type="text/css">
+	html { background: #000; }
+	#chart {
+		min-height: 50%;
+		padding-bottom: 1%;
+	}
+	.go_back_ref {
+		border: 2px #eee solid;
+		color: #fed;
+		text-align: center;
+		padding: 10px;
+		background: #060;
+	}
+</style>
+</html>
