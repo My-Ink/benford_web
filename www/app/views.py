@@ -13,10 +13,12 @@ import plotly.graph_objects as go
 from app import app
 
 UPLOAD_FOLDER = 'uploads'
-ALLOWED_EXTENSIONS = {'txt', 'csv', 'doc', 'docs', 'docx'}
+ALLOWED_EXTENSIONS = {'txt', 'csv', 'doc', 'docs', 'docx', 'xsl'}
+MAX_CONTENT_LENGTH = 32 * 1024 * 1024 # 32 Mb
 
 app.secret_key = b'_5#y2L"F4Qkqghv671gs'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = MAX_CONTENT_LENGTH
 
 def allowed_ext(filename: str):
 	return ('.' in filename) and (filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS)
