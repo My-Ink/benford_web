@@ -30,9 +30,15 @@ def process_file(name):
 	with open(os.path.join(app.config['UPLOAD_FOLDER'], name), 'r') as f:
 
 		cnt = Counter()
+		is_in_number = False
 		for c in f.read():
 			if c in '123456789':
-				cnt[int(c)] += 1
+				if not is_in_number:
+					cnt[int(c)] += 1
+					is_in_number = True
+			else:
+				is_in_number = False
+
 		total = cnt.total()
 
 		digits = np.arange(1, 10)
