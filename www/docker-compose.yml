@@ -23,7 +23,7 @@ services:
     networks:
       my-network:
         aliases:
-          - flask-app
+          - benford-app
 
 networks:
   my-network:
