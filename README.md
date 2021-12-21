@@ -2,5 +2,6 @@
 
 Using:
 ```bash
+cd www/
 docker-compose up
 ```
